@@ -3,12 +3,13 @@ title: Create Advisor alerts for new recommendations by using Resource Manager t
 description: Learn how to set up an alert for new recommendations from Azure Advisor by using an Azure Resource Manager template (ARM template).
 ms.topic: quickstart
 ms.custom: subject-armqs, mode-arm, devx-track-arm-template
-ms.date: 06/29/2020
+ms.date: 07/26/2024
+
 ---
 
 # Quickstart: Create Advisor alerts on new recommendations by using an ARM template
 
-This article shows you how to set up an alert for new recommendations from Azure Advisor by using an Azure Resource Manager template (ARM template).
+Learn how to set up an alert for new recommendations from Azure Advisor by using an Azure Resource Manager template (ARM template).
 
 [!INCLUDE [About Azure Resource Manager](~/reusable-content/ce-skilling/azure/includes/resource-manager-quickstart-introduction.md)]
 
@@ -16,14 +17,17 @@ Whenever Advisor detects a new recommendation for one of your resources, an even
 
 You can also determine the types of recommendations by using these properties:
 
-- Category
-- Impact level
-- Recommendation type
+*   Category
+
+*   Impact level
+
+*   Recommendation type
 
 You can also configure the action that takes place when an alert is triggered by:
 
-- Selecting an existing action group.
-- Creating a new action group.
+*   Selecting an existing action group.
+
+*   Creating a new action group.
 
 To learn more about action groups, see [Create and manage action groups](../azure-monitor/alerts/action-groups.md).
 
@@ -32,12 +36,13 @@ To learn more about action groups, see [Create and manage action groups](../azur
 
 ## Prerequisites
 
-- If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
-- To run the commands from your local computer, install the Azure CLI or the Azure PowerShell modules. For more information, see [Install the Azure CLI](/cli/azure/install-azure-cli) and [Install Azure PowerShell](/powershell/azure/install-azure-powershell).
+*   If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
+
+*   To run the commands from your local computer, install the Azure CLI or the Azure PowerShell modules. For more information, see [Install the Azure CLI](/cli/azure/install-azure-cli) and [Install Azure PowerShell](/powershell/azure/install-azure-powershell).
 
 ## Review the template
 
-The following template creates an action group with an email target and enables all service health notifications for the target subscription. Save this template as *CreateAdvisorAlert.json*.
+The following template creates an action group with an email target and enables all service health notifications for the target subscription. Save this template as `CreateAdvisorAlert.json`.
 
 ```json
 {
@@ -136,8 +141,9 @@ The following template creates an action group with an email target and enables 
 
 The template defines two resources:
 
-- [Microsoft.Insights/actionGroups](/azure/templates/microsoft.insights/actiongroups)
-- [Microsoft.Insights/activityLogAlerts](/azure/templates/microsoft.insights/activityLogAlerts)
+*   [Microsoft.Insights/actionGroups](/azure/templates/microsoft.insights/actiongroups)
+
+*   [Microsoft.Insights/activityLogAlerts](/azure/templates/microsoft.insights/activityLogAlerts)
 
 ## Deploy the template
 
@@ -198,5 +204,6 @@ Remove-AzResourceGroup -Name my-resource-group
 
 ## Related content
 
-- Get an [overview of activity log alerts](../azure-monitor/alerts/alerts-overview.md) and learn how to receive alerts.
-- Learn more about [action groups](../azure-monitor/alerts/action-groups.md).
+*   Get an [overview of activity log alerts](../azure-monitor/alerts/alerts-overview.md) and learn how to receive alerts.
+
+*   Learn more about [action groups](../azure-monitor/alerts/action-groups.md).
